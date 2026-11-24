@@ -2,6 +2,7 @@ from buscador_utiles import *
 
 def test_normalizar_texto():
     print("Probando normalizar_texto...")
+    
     assert normalizar_texto("  Hola Mundo!  ") == ['hola', 'mundo']
     assert normalizar_texto("Python-3.8") == ['python']
     assert normalizar_texto("¡Bienvenidos a la programación!") == ['bienvenidos', 'programación']
@@ -86,11 +87,11 @@ def test_calcula_estadisticas_indice():
     # Promedio: 10 / 5 = 2.0
     assert abs(promedio_urls_por_palabra - 2.0) < 1e-6
 
-test_normalizar_texto()
+#test_normalizar_texto()
 #test_procesar_url_en_indice()
 #test_buscar_palabra_simple()
 #test_buscar_palabras_or()
 #test_buscar_palabras_and()
 #test_procesar_url_en_indice_top_n()
-#test_calcula_estadisticas_indice()
+test_calcula_estadisticas_indice()
 print("Todas las pruebas funcionaron correctamente.")
